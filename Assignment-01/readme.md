@@ -31,7 +31,7 @@ I have similar results with ghidra, but one thing interest is this
 ```
 Ghidra move hello world to argc
 
-In this case we see LEA, but sometimes see this instruction with mov. We can see push instruction too. We only put values on the stack.
+In this case we see LEA, but sometimes see this instruction with mov. We can see push instruction too. 
 
 With IDA&GH, rename our string with the name  "_Format". Compiler need to work with this string (hasn´t its own name)
 
