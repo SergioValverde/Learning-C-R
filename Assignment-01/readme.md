@@ -53,4 +53,8 @@ xor = eXclusive OR
 
 RET = Last instruction RET returning control flow to calling function
 
+dd(ida) e utiliza para definir palabras o valores de 32 bits en la sección de datos
+and
+ds(GH) efinir una cadena de caracteres en la sección de datos.
+
 ```
