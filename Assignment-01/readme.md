@@ -46,7 +46,8 @@ RCX = Puede utilizarse para almacenar temporalmente datos, direcciones de memori
 
 RSP = l registro "RSP" apunta a la cima de la pila en memoria, lo que significa que indica la dirección de memoria donde se almacenará el siguiente valor que se inserte en la pila.
 
-LEA =  cargar la dirección de la cadena "_Format" en el registro RCX.
+LEA =  cargar la dirección de la cadena "_Format" en el registro RCX. similar with GH, se see before of use of []. Pointer of memory to this location
+
 xor = eXclusive OR
 	- The meaning of "xor   eax, eax" is return 0
 	- He have diferent options, like MOV EAX, 0 (more opcodes)
