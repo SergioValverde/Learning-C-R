@@ -17,7 +17,7 @@ The code is represent like this:
 ```
 ; int __cdecl main(int argc, const char **argv, const char **envp)
 main proc near
-sub     rsp, 28h
+sub     rsp, 28h                        
 lea     rcx, _Format    ; "Hello World"
 call    printf
 xor     eax, eax
@@ -42,7 +42,12 @@ WE see here:
 ```
 RCX = Puede utilizarse para almacenar temporalmente datos, direcciones de memoria o valores de contador en ciertas instrucciones de contro
 
-TSP = l registro "RSP" apunta a la cima de la pila en memoria, lo que significa que indica la dirección de memoria donde se almacenará el siguiente valor que se inserte en la pila.
+RSP = l registro "RSP" apunta a la cima de la pila en memoria, lo que significa que indica la dirección de memoria donde se almacenará el siguiente valor que se inserte en la pila.
 
+xor = eXclusive OR
+	- The meaning of "xor   eax, eax" is return 0
+	- He have diferent options, like MOV EAX, 0 (more opcodes)
+
+RET = Last instruction RET returning control flow to calling function
 
 ```
