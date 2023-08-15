@@ -8,10 +8,12 @@ Easy Mode: Allocate an arbitrary amount of indices to your char array and pray t
 Extra Credit: Dynamically allocate the array size of your char variable based on the length of the user's input.
 Example Output
 -----
+```
 tokyo:~/LearningC/ # ./assignment3                                     
 Enter your first name: Jimmy
 Enter your last name: Smith
 Hello Jimmy Smith!
+```
 
 ------
 
