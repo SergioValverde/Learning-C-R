@@ -1,1 +1,58 @@
+EIP, registro que apunta a la dirección de memoria que se va a ejecutar.
+
+ESP, stack points, apunta a la parte superior del stack. superior de lapila
+
+EBP, base point, apunta a la base del stac.
+
+EAX, es el acumulador, se utiliza para guardar los resultados de las funciones. Cuando termina de ejecutar una función debe devolver un valor.
+EBX, apunta a la data, se puede utilizar para lo que uno quiera.
+ECX, es un contador, cuando copiamos bloques de memoria, se va incrementando o decrementando dependiendo de la operacion o el bucle. Operaciones repetitivas.
+ESI, se usan para copiar bloques de memoria, siendo ESI el source y EDI el destination.
+EFLAGS, estado general de los flags
+
+
+Los flags son valores binarios ,y se activan dependen de los funciones que se van activando.
+
+Z,ZERO FLAG, cuando el resultado de una operacion matematica es 0, si no es 0 no se activa.
+
+C, flag de carry, valores unsigned, se activa cuando el resultado de una operacion es mayor del tamaño que se puede almacenar, problemas de desbordamiento.
+O, flag de overflow, similar al anterior, se activa cuando el resultado de una operacion cambia de sigbo
+S, SIGN FLAG, el resultado de una operacion es negativo.
+
+
+call tiene el opcode E8
+jmp tiene el opcode E9
+
+
+Call
+Llamar a una subrutina
+La instruccion call, añado una nueva dirección en el stack, para que cuando la instruccion call se ejecute y termine en un ret, vaya a la nueva posicion del stack
+
+RET
+Return address, guarda la direccion de retorno.
+Aggara ladirección de retorno del stack
+
+JMP
+salta al valor indicado, no se guarda nada en el stack, no tiene retorno. no guarda direccion de retorno.
+
+
+
+PUSH
+Guarda un valor en el stack, añade un nuevo valor en el stack.
+
+PUSHAD
+Apila los registros en el stack
+
+POP
+Sacar el valor que está arriva en el stack
+
+POPAD
+
+
+INC
+Incrementa el registro en 1
+
+Dec
+Descrementa el registro en 1
+
 
