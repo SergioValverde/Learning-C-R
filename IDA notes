@@ -4,6 +4,16 @@ We can create a default desktop, with our important categories (string,imports..
 VIEW-OPEN SUBVIEW - STRINGS: see strings 
 VIEW-OPEN SUBVIEW-DISASSEMBLY : puedo abrir una segunda ventana de desensamblado que puede mostrar una función diferente a la primera y así poder tener muchas funciones a la vista a la vez.
 
+TIPS:
+ - Rename fuctions ;)
+
 
 space = change graphic view or instruction list
 CTRL + F = Search
+x = para saber donde viene
+F2 = breakpoint
+F7 = step into
+f8 = step over
+f9 = run file
+shift + F12 = strings
+shift + F3 = fuctions
