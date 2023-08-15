@@ -28,6 +28,7 @@ Call
 Llamar a una subrutina
 La instruccion call, añado una nueva dirección en el stack, para que cuando la instruccion call se ejecute y termine en un ret, vaya a la nueva posicion del stack
 
+- pushes
 RET
 Return address, guarda la direccion de retorno.
 Aggara ladirección de retorno del stack
