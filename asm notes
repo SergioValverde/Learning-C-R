@@ -56,4 +56,6 @@ Incrementa el registro en 1
 Dec
 Descrementa el registro en 1
 
+LEA
+lea obtiene la dirección de memoria en el stack donde esta ubicada dicha variable
 
