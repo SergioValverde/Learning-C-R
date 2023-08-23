@@ -17,3 +17,21 @@ Hello Jimmy Smith!
 
 ------
 
+###Code
+
+```
+int main() {
+	char name[10];
+	char lastname[10];
+
+	printf("Introduce tu nombre:\n ");
+	scanf("%s", name);
+
+	printf("Introduce tu apellido:\n ");
+	scanf("%s", lastname);
+
+	printf("Welcome %s, %s" name, lastname);
+
+	return 0;
+}
+```
