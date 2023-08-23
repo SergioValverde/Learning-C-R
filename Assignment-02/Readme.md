@@ -69,29 +69,6 @@ main endp
 
 ```
 
-GH
-
-```
-We see diferent options here:
-
-MOV RAX ,qword ptr [__security_cookie ]              = 2B992DDFA232h
-
-MOV        EAX ,dword ptr [s_old!_140002250+8 ]             = "old!"
-
-
-
-```
-
-
-We see:
-
-```
-mov     rax, cs:__security_cookie
-movsd
-movzx
-
-
-```
 
 
 
