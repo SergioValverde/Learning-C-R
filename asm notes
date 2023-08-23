@@ -57,5 +57,5 @@ Dec
 Descrementa el registro en 1
 
 LEA
-lea obtiene la dirección de memoria en el stack donde esta ubicada dicha variable
+lea obtiene la dirección de memoria en el stack donde esta ubicada dicha variable, y es seguro que a continuación, lo usara como argumento en alguna funcion o call para llenarla o asignarle un valor dentro de el mismo.
 
