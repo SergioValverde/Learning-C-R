@@ -9,3 +9,28 @@ tokyo:~/LearningC/ # ./assignment5
 Enter the amount of seconds: 18550
 18550 seconds is equal to 5 hours, 9 minutes, and 10 seconds.#
 
+### CODE
+
+
+```
+#include <stdio.h>
+
+
+int main()
+{
+	float nseconds, seconds, minutes, hours;
+
+	printf("Introduce el número de seconds:\n ");
+	scanf_s("%f", &nseconds);
+
+	hours = (int)(nseconds / 3600);
+
+	minutes = (int)((nseconds - (hours * 3600))/60);
+
+	seconds = (nseconds - (hours * 3600) - (minutes * 60));
+
+
+	printf("El nº de segundos es %0.0f, %f, %f es igual a ", hours, minutes, seconds);
+	
+}
+```
