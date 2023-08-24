@@ -5,4 +5,4 @@ This exercise are projects from:
 
 Ricardo Narvaja
 AND
-"h0mbre" project learning c => https://github.com/h0mbre/Learning-C/tree/master/Assignment-02
+"h0mbre" project learning c => [https://github.com/h0mbre/Learning-C/tree/master/Assignment-02](https://github.com/h0mbre/Learning-C/tree/master)https://github.com/h0mbre/Learning-C/tree/master
