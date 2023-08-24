@@ -30,7 +30,7 @@ int main()
 	seconds = (nseconds - (hours * 3600) - (minutes * 60));
 
 
-	printf("El nº de segundos es %0.0f, %f, %f es igual a ", hours, minutes, seconds);
+	printf("El nº de segundos equivale a %0.0f, %0.0f, %0.0f es igual a ", hours, minutes, seconds);
 	
 }
 ```
