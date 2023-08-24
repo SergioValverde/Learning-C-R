@@ -9,3 +9,22 @@ tokyo:~/LearningC/ # ./assignment4
 Enter the radius of your circle: 12.34
 The area of your circle is 478.145386
 
+###CODE
+
+```
+#include <stdio.h>
+
+
+int main()
+{
+	float radius, area;
+
+	printf("Introduce length of a radius:\n ");
+	scanf_s("%f", &radius);
+
+	area = 3.141592 * (radius * radius);
+
+	printf("El valor de radius es %f", area);
+	
+}
+```
