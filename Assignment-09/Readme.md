@@ -41,4 +41,11 @@ int main(int argc, char* argv[])
 }
 ```
 ### Random
-Nunca me había planteado que un programa, como podría ser ls, la forma de aceptar argumentos se a esta..... y la de veces que lo he usado!
+Nunca me había planteado que un programa, como podría ser ls, la forma de aceptar argumentos se a esta..... y la de veces que lo he usado! Buenisimo.
+
+
+IDA
+jz =     The jz instruction is a conditional jump that follows a test.
+    It jumps to the specified location if the Zero Flag (ZF) is set (1).
+    jz is commonly used to explicitly test for something being equal to zero whereas je is commonly found after a cmp instruction.
+
