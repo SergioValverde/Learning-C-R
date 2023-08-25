@@ -18,5 +18,26 @@ There is a remainder!#
 ###CODE
 
 ```
+#include <stdio.h>
 
+
+int main() {
+    
+    int Numerator, Denominator, Remainder;
+
+    printf("Introduce el Numerator\n ");
+    scanf_s("%d", &Numerator);
+
+    printf("Introduce el Denominator\n ");
+    scanf_s("%d", &Denominator);
+
+    Remainder = (Numerator%Denominator);
+
+    if (Remainder == 0) {
+            printf("El resto es igual a 0");
+    }
+    else {
+        printf("El resto no es igual a 0");
+    }
+}
 ```
