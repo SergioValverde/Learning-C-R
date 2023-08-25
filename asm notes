@@ -59,3 +59,9 @@ Descrementa el registro en 1
 LEA
 lea obtiene la dirección de memoria en el stack donde esta ubicada dicha variable, y es seguro que a continuación, lo usara como argumento en alguna funcion o call para llenarla o asignarle un valor dentro de el mismo.
 
+JZ
+    
+The jz instruction is a conditional jump that follows a test.
+It jumps to the specified location if the Zero Flag (ZF) is set (1).
+jz is commonly used to explicitly test for something being equal to zero whereas je is commonly found after a cmp instruction.
+
