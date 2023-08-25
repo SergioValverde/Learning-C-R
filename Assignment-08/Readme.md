@@ -54,19 +54,19 @@ int main(void)
 		printf("Your number is between 100 and 200\n");
 	}	
 	
-	else if (number >= 200 && number <= 300) {
+	else if (number >= 201 && number <= 300) {
 		printf("Your number is between 100 and 200\n");
 	}
 	
-	else if (number >= 300 && number <= 400) {
+	else if (number >= 301 && number <= 400) {
 		printf("Your number is between 100 and 200\n");
 	}
 	
-	else if (number >= 400 && number <= 500) {
+	else if (number >= 401 && number <= 500) {
 		printf("Your number is between 100 and 200\n");
 	}
 	
-	if (number >= 500) {
+	if (number >= 501) {
 		printf("Your number is bigger than 500");
 	}
 	return 0;
