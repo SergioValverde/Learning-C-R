@@ -14,3 +14,5 @@ tokyo:~/LearningC/ # ./assignment9 Jimmy Paul Smith
 Usage: ./assignment9 Firstname Lastname#
 ```
 
+Random
+Nunca me había planteado que un programa, como podría ser ls, la forma de aceptar argumentos se a esta..... y la de veces que lo he usado!
