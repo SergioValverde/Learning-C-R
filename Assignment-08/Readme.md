@@ -34,3 +34,41 @@ Your number was not in any of our ranges.#
 -----
 
 ###CODE
+
+```
+#include<stdio.h>
+
+int main(void)
+{
+
+	int number;
+
+	printf("Enter a number between 1 and 500:\n");
+	scanf_s("%d", &number);
+
+	if (number <= 100) {
+		printf("Your number is low than 100\n");
+	}
+	
+	else if (number >= 101 && number <= 200) {
+		printf("Your number is between 100 and 200\n");
+	}	
+	
+	else if (number >= 200 && number <= 300) {
+		printf("Your number is between 100 and 200\n");
+	}
+	
+	else if (number >= 300 && number <= 400) {
+		printf("Your number is between 100 and 200\n");
+	}
+	
+	else if (number >= 400 && number <= 500) {
+		printf("Your number is between 100 and 200\n");
+	}
+	
+	if (number >= 500) {
+		printf("Your number is bigger than 500");
+	}
+	return 0;
+}
+```
