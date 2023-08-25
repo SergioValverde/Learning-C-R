@@ -13,6 +13,32 @@ Hello, Jimmy Smith#
 tokyo:~/LearningC/ # ./assignment9 Jimmy Paul Smith                  
 Usage: ./assignment9 Firstname Lastname#
 ```
+--------
 
-Random
+Code 
+```
+#include <stdio.h>
+
+// defining main with arguments
+int main(int argc, char* argv[])
+{
+    printf("You have entered %d arguments, only accept 3\n", argc);
+
+    if (argc < 3) {
+        printf("Usage: ./assignment9 Firstname Lastname#");
+    }
+
+    else if (argc > 3) {
+        printf("Usage: ./assignment9 Firstname Lastname#");
+    }
+
+    char *nombre = argv[1];
+    char *apellido = argv[2];
+
+    printf("Hello, %s %s\n", nombre, apellido);
+
+    return 0;
+}
+```
+### Random
 Nunca me había planteado que un programa, como podría ser ls, la forma de aceptar argumentos se a esta..... y la de veces que lo he usado!
