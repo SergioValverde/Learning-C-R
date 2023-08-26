@@ -5,9 +5,17 @@ We can create a default desktop, with our important categories (string,imports..
 VIEW-OPEN SUBVIEW - STRINGS: see strings 
 VIEW-OPEN SUBVIEW-DISASSEMBLY : puedo abrir una segunda ventana de desensamblado que puede mostrar una función diferente a la primera y así poder tener muchas funciones a la vista a la vez.
 
+
+
+FLECHA VERDE = RESULTADO DEL SALTO CONDICIONAL VERDADERO.
+FLECHA ROJA = RESULTADO DEL SALTO CONDICIONAL FALSO.
+
+
+
 TIPS:
  - Rename fuctions ;)
 
+Shortcuts:
 
 space = change graphic view or instruction list
 CTRL + F = Search
