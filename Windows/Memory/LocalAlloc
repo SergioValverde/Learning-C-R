@@ -1,1 +1,32 @@
 LocalAlloc()
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+#include <stddef.h>
+#include <ntdef.h>
+
+
+int main(void)
+{
+	char* cString = "i like this code ;)";
+
+	
+	LPVOID p = LocalAlloc(LPTR, 100);
+
+	if (p == NULL) {
+		
+		printf("Valor Null"); 
+		
+		return -1;
+	}
+	else {
+		printf(" |--- [+] RW memory allocated: 0x%p\n", p);
+	
+	}
+
+	memcpy(p, cString, strlen(cString));
+
+
+	return 0;
+}
