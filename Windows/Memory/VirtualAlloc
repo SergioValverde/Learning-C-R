@@ -18,11 +18,13 @@ int main(void)
 		return -1;
 	}
 	else {
-		printf(" |--- [+] RWX memory allocated: %p\n", p);
+		printf(" |--- [+] RWX memory allocated: 0x%p\n", p);
 	
 	}
 
 	memcpy(p, cString, strlen(cString));
+
+	VirtualFree(p, 1000, MEM_DECOMMIT);
 	
 	return 0;
 }
