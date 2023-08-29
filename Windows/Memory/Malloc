@@ -1,1 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(void)
+{
+	int* p = NULL; // NULL o 0
+	int nbytes = 100;
+	p = (int*)malloc(nbytes); // malloc always return a void number, we use casting here
+	if (p == NULL) // verificamos que tenemos espacio de memoria
+	{
+		printf("Insuficiente espacio de memoria\n");
+		return -1;
+	}
+	
+	printf("La dirección de memoria del puntero es  %p\n", p);
 
+	printf("Se han asignado %d bytes de memoria\n", nbytes);
+
+  free(p); // liberamos el espacio de memoria
+	return 0;
+}
