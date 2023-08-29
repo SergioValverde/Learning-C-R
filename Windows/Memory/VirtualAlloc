@@ -1,6 +1,3 @@
-
-FALLA
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
@@ -9,23 +6,23 @@ FALLA
 
 int main(void)
 {
-	int* nbytes = 1000;
+	char* cString = "i like this code ;)";
 
 	
-	LPVOID p = VirtualAlloc(NULL, nbytes, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
+	LPVOID p = VirtualAlloc(NULL, 1000, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
 
-	if (p = NULL) {
+	if (p == NULL) {
 		
-		printf("Valor Null"); // Si VirtualAlloc falla devolvera Null, check Return value froms docs.
+		printf("Valor Null"); 
 		
+		return -1;
 	}
 	else {
 		printf(" |--- [+] RWX memory allocated: %p\n", p);
-		strcpy((int*)p, nbytes);
-		printf("Contenido de la memoria asignada: %d\n", (int*)p);
-		VirtualFree(p, 0, MEM_RELEASE);
-
+	
 	}
+
+	memcpy(p, cString, strlen(cString));
 	
 	return 0;
 }
