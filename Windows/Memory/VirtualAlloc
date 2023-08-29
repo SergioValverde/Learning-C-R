@@ -62,3 +62,41 @@ int main(void)
 
     return 0;
 }
+
+
+
+------------
+
+Using RtlFillMemory()
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+#include <stddef.h>
+#include <ntdef.h>
+
+
+int main(void)
+{
+	char* cString = "i like this code ;)";
+
+	
+	LPVOID p = VirtualAlloc(NULL, sizeof(cString), MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
+
+	if (p == NULL) {
+		
+		printf("Valor Null"); 
+		
+		return -1;
+	}
+	else {
+		printf(" |--- [+] RWX memory allocated: 0x%p\n", p);
+	
+	}
+
+	RtlFillMemory(p, sizeof(cString), 0);
+
+	VirtualFree(p, 0, MEM_RELEASE);
+
+	return 0;
+}
