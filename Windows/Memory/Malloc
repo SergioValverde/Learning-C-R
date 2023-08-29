@@ -11,7 +11,7 @@ int main(void)
 		return -1;
 	}
 	
-	printf("La dirección de memoria del puntero es  %p\n", p);
+	printf("La dirección de memoria del puntero es  0x%p\n", p);
 
 	printf("Se han asignado %d bytes de memoria\n", nbytes);
 
