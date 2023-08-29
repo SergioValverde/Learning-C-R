@@ -18,7 +18,7 @@ int main(void)
 		return -1;
 	}
 	else {
-		printf(" |--- [+] RWX memory allocated: 0x%p\n", p);
+		printf(" |--- [+] RW memory allocated: 0x%p\n", p);
 	
 	}
 
@@ -54,7 +54,7 @@ int main(void)
         return -1;
     }
     else {
-        printf(" |--- [+] RWX memory allocated: 0x%p\n", p);
+        printf(" |--- [+] RW memory allocated: 0x%p\n", p);
     
     }
 
@@ -90,7 +90,7 @@ int main(void)
 		return -1;
 	}
 	else {
-		printf(" |--- [+] RWX memory allocated: 0x%p\n", p);
+		printf(" |--- [+] RW memory allocated: 0x%p\n", p);
 	
 	}
 
