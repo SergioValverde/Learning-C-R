@@ -1,1 +1,34 @@
-HeapAlloc()
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+
+int main(void)
+{
+	//int* nbytes = 1000;
+
+	CHAR* cString = "String";
+
+	PVOID p = HeapAlloc(GetProcessHeap(), HEAP_ZERO_MEMORY, 100);
+
+	if (p == NULL) // verificamos que tenemos espacio de memoria
+	{
+		printf("Insuficiente espacio de memoria\n");
+		return -1;
+	}
+
+	printf("Direccion base de la memoria allocated  0x%p\n", p);
+
+	
+
+	//La función memset permite iniciar un bloque de memoria.
+	// MEMCPY copy cString to p
+
+	memcpy(p, cString, strlen(cString));
+
+	HeapFree(GetProcessHeap(), HEAP_NO_SERIALIZE, p);
+
+	return 0;
+}
+
+
+/* put breakpoints on HeapFree and see the memory locations */
