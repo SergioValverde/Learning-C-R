@@ -1,0 +1,33 @@
+/* Create a handle to a process
+
+*/
+
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+#include <stddef.h>
+#include <ntdef.h>
+
+
+int main(int argc, char* argv)
+{
+	DWORD PID = argv[1];
+
+	HANDLE hprocess = OpenProcess(PROCESS_VM_READ, TRUE, PID);
+
+	if (hprocess == NULL) {
+
+		printf("Valor Null");
+		
+		return 0;
+	}
+
+	printf("El valor del handle 0x%p", hprocess);
+
+
+
+}
+
+```
