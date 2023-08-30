@@ -1,14 +1,15 @@
 /* Create a handle to a process
+ We can play with the instruction to try to reduce
+
+for example:
+
+OpenProcess(PROCESS_ALL_ACCESS, TRUE, atoi(argv[1]));
 
 */
 
 
 ```
-#include <stdio.h>
-#include <stdlib.h>
 #include <windows.h>
-#include <stddef.h>
-#include <ntdef.h>
 
 
 int main(int argc, char* argv)
