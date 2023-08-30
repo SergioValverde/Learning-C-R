@@ -18,16 +18,12 @@ int main(int argc, char* argv)
 
 	HANDLE hprocess = OpenProcess(PROCESS_VM_READ, TRUE, PID);
 
-	if (hprocess == NULL) {
+	if (hProcess == NULL) {
+        printf("No se pudo abrir el proceso. Error: %d\n", GetLastError());
+        return 1;
+    }
 
-		printf("Valor Null");
-		
-		return 0;
-	}
-
-	printf("El valor del handle 0x%p", hprocess);
-
-
+	printf("Direccion base de memoria del handle 0x%p", hprocess);
 
 }
 
