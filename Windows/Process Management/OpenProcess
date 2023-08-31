@@ -1,10 +1,9 @@
 /* Create a handle to a process
- We can play with the instruction to try to reduce
 
-for example:
+processes and threads don’t have names - they have IDs
 
-OpenProcess(PROCESS_ALL_ACCESS, TRUE, atoi(argv[1]));
-
+For terminate process, use PROCESS_TERMINATE, otherwise there is no way to terminate the process with
+that handle
 */
 
 
@@ -28,3 +27,13 @@ int main(int argc, char* argv)
 }
 
 ```
+
+Other forms ...
+
+if (!hProcess)
+return false;
+
+
+ We can play with the instruction to try to reduce, for example:
+
+OpenProcess(PROCESS_ALL_ACCESS, TRUE, atoi(argv[1]));
