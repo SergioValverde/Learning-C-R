@@ -27,4 +27,34 @@ Would you like to continue? Y/N N
 
 ------
 
-###CODE
+###CODE - NO Funciona
+
+```
+#include <stdio.h>
+
+
+int main() {
+    float x[10];
+    int i = 0;
+    
+    char answer[] = "Y";
+
+    //v = getchar();
+
+    while (strcmp(answer, "Y") == 0) {
+        
+        printf("Enter a test score:\n");
+        scanf_s("%f", &x[i]);
+
+        i++;
+
+
+        printf("Would you like to continue ? Y / N\n");
+        scanf_s("%1s", &answer);
+
+    }
+    
+      return 0;
+}
+```
+
