@@ -4,13 +4,13 @@ Prompt the user for a number of coin flips (x) and then simulate (x) number of c
 
 Hint: Look up the srand() function.
 Example Output
-
+```
 tokyo:~/LearningC/ # ./assignment12                                  
 How many times would you like to flip the coin? 5000
 After flipping the coin 5000 times, the results were
 2536 heads
 2464 tails
-
+```
 ------
 
 ### CODE
