@@ -27,34 +27,55 @@ Would you like to continue? Y/N N
 
 ------
 
-###CODE - NO Funciona
+###CODE 
 
 ```
 #include <stdio.h>
 
-
-int main() {
-    float x[10];
-    int i = 0;
-    
-    char answer[] = "Y";
-
-    //v = getchar();
-
-    while (strcmp(answer, "Y") == 0) {
-        
-        printf("Enter a test score:\n");
-        scanf_s("%f", &x[i]);
-
-        i++;
+int main(void) {
+	
+	int value[10];
+	int i=0;
+	char answer[] = "Y";
+	char N = 'N';
 
 
-        printf("Would you like to continue ? Y / N\n");
-        scanf_s("%1s", &answer);
 
-    }
-    
-      return 0;
+	
+	while (strcmp(answer, "Y") == 0) {
+		
+		printf("Enter a test score:\n");
+
+		scanf_s("%d", &value[i]);
+
+		//increase our counter
+		i++;
+
+
+		printf("Would you like to continue? Y/N");
+
+		scanf_s("%s", &answer);
+
+		
+
+	}
+
+	int loop;
+	int sum = 0;
+
+	//start a loop that will start at 0, and then it'll iterate through our scores array until it reaches the end
+	//each element in the array will be added to the sum so that we can find the average
+	for (loop = 0; loop < i; loop++)
+	{
+		sum = sum + value[loop];
+	}
+
+	//do the maths
+	float average;
+
+	average = (float)sum / loop;
+
+	printf("%.2f is the average.\n", average);
 }
 ```
 
