@@ -43,7 +43,6 @@ int main(void) {
 	int tails = 0;
 	int heads = 0;
 	
-	//printf("After flipping the coin %d times, the results were\n", flip);
 
 	for (int i = 0; i < flip; i++) {
 
