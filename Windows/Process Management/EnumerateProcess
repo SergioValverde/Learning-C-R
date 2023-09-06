@@ -1,0 +1,79 @@
+//Algo Falla..
+// revisar => printf(_T("%s  (PID: %d)\n"), szProcessName, pid);
+
+
+#include <stdio.h>
+#include <windows.h>
+#include <psapi.h>
+
+
+int PrintProcessNameAndID(DWORD pid) {
+
+    TCHAR szProcessName[MAX_PATH] = TEXT("<unknown>");
+
+    // Get a handle to the process.
+
+    HANDLE hProcess = OpenProcess(PROCESS_QUERY_INFORMATION | PROCESS_VM_READ,FALSE, pid);
+
+    // Get the process name.
+
+    if (NULL != hProcess)
+    {
+        HMODULE hMod;
+        DWORD cbNeeded;
+
+        if (EnumProcessModules(hProcess, &hMod, sizeof(hMod),
+            &cbNeeded))
+        {
+            GetModuleBaseName(hProcess, hMod, szProcessName,
+                sizeof(szProcessName) / sizeof(TCHAR));
+        }
+    }
+
+    // Print the process name and identifier.
+
+    printf(_T("%s  (PID: %d)\n"), szProcessName, pid);
+
+    // Release the handle to the process.
+
+    CloseHandle(hProcess);
+}
+
+
+
+
+int main() {
+
+    // Enumerar procesos
+
+    //const int pidsize = 1024;
+    DWORD lpid[1024];
+    DWORD actualSize;
+    
+
+    BOOL fuction = EnumProcesses(lpid, sizeof(lpid), &actualSize);
+
+    if (!fuction) {
+        printf("Error\n");
+        return 1;
+    }
+
+    // Calculate how many process identifiers were returned.
+
+    DWORD Process;
+
+    Process = actualSize / sizeof(DWORD);
+
+    // Print the name and process identifier for each process.
+
+    unsigned int i;
+
+    for (i = 0; i < Process; i++) {
+        
+        PrintProcessNameAndID(lpid[i]);
+        
+    }
+
+    return 0;
+
+}
