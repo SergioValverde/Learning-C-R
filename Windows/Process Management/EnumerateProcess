@@ -1,9 +1,9 @@
 //Algo Falla..
 // revisar => printf(_T("%s  (PID: %d)\n"), szProcessName, pid);
 
-
-#include <stdio.h>
 #include <windows.h>
+#include <stdio.h>
+#include <tchar.h>
 #include <psapi.h>
 
 
@@ -17,22 +17,24 @@ int PrintProcessNameAndID(DWORD pid) {
 
     // Get the process name.
 
-    if (NULL != hProcess)
+    if (hProcess != NULL)
+    
     {
+        
         HMODULE hMod;
         DWORD cbNeeded;
-
-        if (EnumProcessModules(hProcess, &hMod, sizeof(hMod),
-            &cbNeeded))
+        
+        if (EnumProcessModules(hProcess, &hMod, sizeof(hMod),&cbNeeded))
+        
         {
-            GetModuleBaseName(hProcess, hMod, szProcessName,
-                sizeof(szProcessName) / sizeof(TCHAR));
+            GetModuleBaseName(hProcess, hMod, szProcessName,sizeof(szProcessName) / sizeof(TCHAR));
         }
+    
     }
 
     // Print the process name and identifier.
 
-    printf(_T("%s  (PID: %d)\n"), szProcessName, pid);
+    printf("%s (PID: %d)\n", szProcessName, pid);
 
     // Release the handle to the process.
 
@@ -42,7 +44,7 @@ int PrintProcessNameAndID(DWORD pid) {
 
 
 
-int main() {
+int main(void) {
 
     // Enumerar procesos
 
@@ -69,11 +71,18 @@ int main() {
     unsigned int i;
 
     for (i = 0; i < Process; i++) {
+
+        if (lpid[i] != 0) {
+            PrintProcessNameAndID(lpid[i]);
+        }
         
-        PrintProcessNameAndID(lpid[i]);
+
+       // PrintProcessNameAndID(lpid[i]);
         
     }
 
     return 0;
 
+
 }
+
