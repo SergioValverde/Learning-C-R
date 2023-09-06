@@ -1,6 +1,3 @@
-//Algo Falla..
-// revisar => printf(_T("%s  (PID: %d)\n"), szProcessName, pid);
-
 #include <windows.h>
 #include <stdio.h>
 #include <tchar.h>
