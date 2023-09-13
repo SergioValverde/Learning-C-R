@@ -13,37 +13,50 @@ Hint: Use a two-dimensional array and nested for loops. The outer-most for loop 
 ```
 #include <stdio.h>
 
+int main() {
+    // Define constants for the number of players and games
+    const int numPlayers = 5;
+    const int numGames = 4;
 
+    // Declare a two-dimensional array to store scores
+    int scores[5][4];
 
-int main(void) {
+    // Prompt the user to input scores for each player and game
+    for (int i = 0; i < numPlayers; i++) {
 
-	//array de 5 elementos (players) of 4 elements (games) de tipo int;
+        printf("Enter scores for Player %d (4 games):\n", i + 1);
 
-	int players[5][4];
-	int score[5];
-	
+        for (int j = 0; j < numGames; j++) {
+            printf("Game %d: ", j + 1);
+            scanf_s("%d", &scores[i][j]);
+        }
+    }
 
-	// 
-	int games_counter,player_counter;
+    // Calculate the total scores for each player and the highest average
+    int highestAverage = 0;
+    int playerWithHighestAverage = 0;
 
+    for (int i = 0; i < numPlayers; i++) {
+        int totalScore = 0;
+        for (int j = 0; j < numGames; j++) {
+            totalScore += scores[i][j];
+        }
 
-	for (games_counter = 0; games_counter < 4; games_counter++) {
+        // Calculate the average for the current player
+        int average = totalScore / numGames;
 
-		
-		for (player_counter = 0; player_counter < 5; player_counter++) {
-			
-			//printf("Enter the scopre for every player: \n");
-			scanf_s("%d", players[j][i]);
+        // Check if the current player has a higher average
+        if (average > highestAverage) {
+            highestAverage = average;
+            playerWithHighestAverage = i;
+        }
+    }
 
-			printf("The score is: %d", players[j][i]);
+    // Display the player with the highest average
+    printf("Player %d has the highest scoring average of %d\n", playerWithHighestAverage + 1, highestAverage);
 
-		}
-
-		
-	}
-
-
-	return 0;
+    return 0;
 }
+
 
 ```
