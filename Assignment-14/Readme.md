@@ -9,3 +9,18 @@ The value of our pointer is: -1081381992
 
 -----
 ###CODe
+
+```
+#include <stdio.h>
+
+int main() {
+   
+    int p = 1;
+
+    int *pp = &p;
+
+    printf("The value of our pointer is: %p", pp);
+
+    return 0;
+}
+```
