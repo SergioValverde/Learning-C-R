@@ -1,1 +1,37 @@
-I
+#include <stdio.h>
+#include <windows.h>
+
+int main(int argc, char* argv[]) {
+   
+
+    char* shellcode[] = { "funcionara?" };
+
+    DWORD PID = atoi(argv[1]);
+    DWORD dwThreadID = 0;
+
+    HANDLE hprocess = OpenProcess(PROCESS_VM_READ, TRUE, PID);
+    
+    printf(" handle 0x%p\n", hprocess);
+
+    // The next option its not opsec option
+
+    LPVOID FnVirtualAlloc = VirtualAlloc(hprocess, NULL, MEM_COMMIT | MEM_RESERVE, PAGE_EXECUTE_READWRITE);
+    printf(" handle 0x%p\n", FnVirtualAlloc);
+
+
+   
+    WriteProcessMemory(hprocess, FnVirtualAlloc, shellcode, strlen(shellcode), NULL);
+    
+    //Other option, its use memcpy(FnVirtualAlloc, shellcode, strlen(shellcode));
+    
+    CreateRemoteThread(hprocess, NULL, 0, FnVirtualAlloc, NULL,0,&dwThreadID);
+    
+    printf("thread ID %d\n", dwThreadID);
+    getchar();
+    
+    //VirtualFree(FnVirtualAlloc, 1000, MEM_DECOMMIT);
+
+
+
+    return 0;
+}
